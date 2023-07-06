@@ -1,5 +1,5 @@
-# crab-strategy
-dream-inspired crab-themed strategy game
+# crab-plethora
+render many crabs
 
 ## How to play
-W, A, S, D movement, touch another crab to gain a point
+press any key, enjoy the show
