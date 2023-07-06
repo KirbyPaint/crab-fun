@@ -1,28 +1,39 @@
-let redCrab;
-let blueCrab;
-let greenCrab;
-let yellowCrab;
+let c1, c2, c3, c4, c5;
 
 function setup() {
-	createCanvas(windowWidth-20, windowHeight-20);
-	redCrab = loadImage(`./assets/red.svg`);
-	blueCrab = loadImage(`./assets/blue.svg`);
-	greenCrab = loadImage(`./assets/green.svg`);
-	yellowCrab = loadImage(`./assets/yellow.svg`);
+	createCanvas(windowWidth - 20, windowHeight - 20);
+
+	const random = Math.floor(Math.random() * 3);
+	switch (random) {
+		case 0:
+			console.log(`Coral`)
+			c1 = loadImage(`./assets/themes/coral/coral-1.svg`);
+			c2 = loadImage(`./assets/themes/coral/coral-2.svg`);
+			c3 = loadImage(`./assets/themes/coral/coral-3.svg`);
+			c4 = loadImage(`./assets/themes/coral/coral-4.svg`);
+			c5 = loadImage(`./assets/themes/coral/coral-5.svg`);
+			break;
+		case 1:
+			console.log(`Forest`)
+			c1 = loadImage(`./assets/themes/forest/forest-1.svg`);
+			c2 = loadImage(`./assets/themes/forest/forest-2.svg`);
+			c3 = loadImage(`./assets/themes/forest/forest-3.svg`);
+			c4 = loadImage(`./assets/themes/forest/forest-4.svg`);
+			c5 = loadImage(`./assets/themes/forest/forest-5.svg`);
+			break;
+		case 2:
+			console.log(`Viridian`)
+			c1 = loadImage(`./assets/themes/viridian/viridian-1.svg`);
+			c2 = loadImage(`./assets/themes/viridian/viridian-2.svg`);
+			c3 = loadImage(`./assets/themes/viridian/viridian-3.svg`);
+			c4 = loadImage(`./assets/themes/viridian/viridian-4.svg`);
+			c5 = loadImage(`./assets/themes/viridian/viridian-5.svg`);
+			break;
+	}
 	background(`white`);
 }
 
-
-function redCrabMove(img, x, y) {
-	image(img, x, y, 50, 50);
-}
-function blueCrabMove(img, x, y) {
-	image(img, x, y, 50, 50);
-}
-function greenCrabMove(img, x, y) {
-	image(img, x, y, 50, 50);
-}
-function yellowCrabMove(img, x, y) {
+function crabMove(img, x, y) {
 	image(img, x, y, 50, 50);
 }
 
@@ -32,23 +43,23 @@ function ai() {
 
 	randomX = Math.floor(Math.random() * windowWidth);
 	randomY = Math.floor(Math.random() * windowHeight);
-	blueCrabMove(blueCrab, randomX, randomY);
-
+	crabMove(c1, randomX, randomY);
 	randomX = Math.floor(Math.random() * windowWidth);
 	randomY = Math.floor(Math.random() * windowHeight);
-	greenCrabMove(greenCrab, randomX, randomY);
-
+	crabMove(c2, randomX, randomY);
 	randomX = Math.floor(Math.random() * windowWidth);
 	randomY = Math.floor(Math.random() * windowHeight);
-	yellowCrabMove(yellowCrab, randomX, randomY);
-
+	crabMove(c3, randomX, randomY);
 	randomX = Math.floor(Math.random() * windowWidth);
 	randomY = Math.floor(Math.random() * windowHeight);
-	redCrabMove(redCrab, randomX, randomY);
+	crabMove(c4, randomX, randomY);
+	randomX = Math.floor(Math.random() * windowWidth);
+	randomY = Math.floor(Math.random() * windowHeight);
+	crabMove(c5, randomX, randomY);
 }
 
 // Draw happens EVERY FRAME
-function draw() {}
+function draw() { }
 
 // Handles all key press conditions
 function keyPressed() {
