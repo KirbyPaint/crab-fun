@@ -3,7 +3,7 @@ let c1, c2, c3, c4, c5;
 function setup() {
 	createCanvas(windowWidth - 20, windowHeight - 20);
 
-	const random = Math.floor(Math.random() * 3);
+	const random = Math.floor(Math.random() * 5);
 	switch (random) {
 		case 0:
 			console.log(`Coral`)
@@ -28,6 +28,22 @@ function setup() {
 			c3 = loadImage(`./assets/themes/viridian/viridian-3.svg`);
 			c4 = loadImage(`./assets/themes/viridian/viridian-4.svg`);
 			c5 = loadImage(`./assets/themes/viridian/viridian-5.svg`);
+			break;
+		case 3:
+			console.log(`Valentine`)
+			c1 = loadImage(`./assets/themes/valentine/valentine-1.svg`);
+			c2 = loadImage(`./assets/themes/valentine/valentine-2.svg`);
+			c3 = loadImage(`./assets/themes/valentine/valentine-3.svg`);
+			c4 = loadImage(`./assets/themes/valentine/valentine-4.svg`);
+			c5 = loadImage(`./assets/themes/valentine/valentine-5.svg`);
+			break;
+		case 4:
+			console.log(`Punch`)
+			c1 = loadImage(`./assets/themes/punch/punch-1.svg`);
+			c2 = loadImage(`./assets/themes/punch/punch-2.svg`);
+			c3 = loadImage(`./assets/themes/punch/punch-3.svg`);
+			c4 = loadImage(`./assets/themes/punch/punch-4.svg`);
+			c5 = loadImage(`./assets/themes/punch/punch-5.svg`);
 			break;
 	}
 	background(`white`);
